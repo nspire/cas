@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Cas::Application.config.secret_key_base = '055985ad3a6e6d3c7e982d575262da9e83d449027c1c7b39022a68738f464bb48f11223162e760780b95abc448de7363274682ccab939c8340d4075a98216e2b'
+Cas::Application.config.secret_key_base = '1c7be7e8636582375ce04270d5142594cc026e053b862da3f0b8c44b60ed7710321253e05b85536061c94c4c742dfd6964cb5ab0f109b6d7518ef20452752a71'
