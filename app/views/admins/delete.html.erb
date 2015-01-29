@@ -1,0 +1,12 @@
+<%= link_to("Back to index", {:action => 'index'}, :class => "back-link") %>
+<div class="admins delete">
+	<h2>Create an Admin</h2>
+	<%= form_for(:admin, :url => {:action => 'delete_user', :id => @admin.id}) do |f|%>
+		<p>Are you sure you want to delete?</p>
+		<br />
+		<p class="reference-name"></p>
+		<div class="form-button">
+			<%= submit_tag("Delete Admin") %>
+		</div>
+	<% end %>
+</div>

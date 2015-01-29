@@ -1,0 +1,9 @@
+<div class="menu">
+	<h2>Admin Menu</h2>
+	<div class="identity">Logged in as <%= session[:username] %></div>
+	<ul>
+		<li><%= link_to("Add Users", :controller => 'users', :action => 'new') %></li>
+		<li><%= link_to("Manage Users", :controller => 'users', :action => 'show') %></li>
+		<li><%= link_to("Logout", :action => 'logout') %></li>
+	</ul>
+</div>

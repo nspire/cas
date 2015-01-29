@@ -1,0 +1,50 @@
+<%= link_to("Back to index", {:action => 'index'}, :class => "back-link") %>
+<% if !flash[:error].blank? %>
+	<div class="notice"> 
+		<%= flash[:error] %> 
+	</div>
+<% end %>
+<div class="admins edit">
+	<h2>Create an Admin</h2>
+	<%= form_for(:admin, :url => {:action => 'update', :id => @admin[:id]}) do |f| %>
+		<table summary="Admin form fields">
+			<tr>
+				<th>First name</th>
+				<td><%= f.text_field(:fname) %></td>
+			</tr>
+			<tr>
+				<th>Last Name</th>
+				<td><%= f.text_field(:lname) %></td>
+			</tr>
+			<tr>
+				<th>Organization</th>
+				<td><%= f.text_field(:organization) %></td>
+			</tr>
+			<tr>
+				<th>Email</th>
+				<td><%= f.text_field(:email) %></td>
+			</tr>
+			<tr>
+				<th>User Limit</th>
+				<td><%= f.text_field(:user_limit) %></td>
+			</tr>
+			<tr>
+				<th>Username</th>
+				<td><%= f.text_field(:username) %></td>
+			</tr>
+			<tr>
+				<th>Password</th>
+				<td><%= f.text_field(:password) %></td>
+			</tr>
+			
+		</table>
+
+		<br />
+
+		<div class="form-button">
+			<%= submit_tag("Update Admin") %>
+		</div>
+
+	<% end %>
+
+</div>
